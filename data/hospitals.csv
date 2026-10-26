@@ -1,0 +1,51 @@
+id,name,lat,lon,base_capacity,icu,vent,oxy,gen,walk_in_lambda
+HOSP-101,PGIMER Chandigarh,30.7656,76.777,386,77,38,115,156,0.22
+HOSP-102,GMCH Sector 32 Chandigarh,30.7073,76.7869,139,27,13,41,58,0.16
+HOSP-103,Max Super Speciality Hospital Mohali,30.723,76.7197,226,45,22,68,91,0.18
+HOSP-104,Fortis Hospital Mohali,30.7028,76.7329,174,34,17,52,71,0.15
+HOSP-105,Civil Hospital Sector 6 Panchkula,30.6974,76.8529,223,44,22,67,90,0.17
+HOSP-106,Command Hospital Western Command,30.6865,76.8614,220,44,22,66,88,0.14
+HOSP-107,Alchemist Hospital Panchkula,30.672,76.8456,494,98,49,148,199,0.24
+HOSP-108,GMSH Sector 16 Chandigarh,30.749,76.7794,312,62,31,94,125,0.2
+HOSP-109,Ivy Hospital Mohali Sector 71,30.71,76.705,409,81,40,123,165,0.21
+HOSP-110,Cosmo Hospital Mohali,30.7214,76.7145,475,95,47,142,191,0.23
+HOSP-111,Paras Hospital Panchkula,30.6654,76.8631,396,79,39,119,159,0.19
+HOSP-112,Ojas Hospital Sector 26 Panchkula,30.6689,76.879,70,14,7,21,28,0.11
+HOSP-113,Sohana Multi Speciality Hospital,30.6765,76.721,355,71,35,107,142,0.2
+HOSP-114,Silver Oaks Hospital Mohali,30.7289,76.725,313,63,31,94,125,0.18
+HOSP-115,Cheema Medical Complex Mohali,30.7205,76.73,190,38,19,57,76,0.14
+HOSP-116,Mukat Hospital Sector 34 Chandigarh,30.721,76.764,160,32,16,48,64,0.15
+HOSP-117,Healing Hospital Sector 35 Chandigarh,30.725,76.755,110,22,11,33,44,0.13
+HOSP-118,Santokh Hospital Sector 38 Chandigarh,30.745,76.745,95,19,9,28,39,0.12
+HOSP-119,Landmark Hospital Sector 33 Chandigarh,30.715,76.772,120,24,12,36,48,0.13
+HOSP-120,Dhawan Hospital Sector 7 Panchkula,30.692,76.85,140,28,14,42,56,0.14
+HOSP-121,Bansal Eye and Surgical Hospital,30.685,76.855,85,17,8,26,34,0.11
+HOSP-122,Indus Super Speciality Hospital Mohali,30.689,76.735,210,42,21,63,84,0.16
+HOSP-123,Grecian Super Speciality Hospital,30.718,76.702,175,35,17,52,71,0.15
+HOSP-124,Eden Hospital Industrial Area Chandigarh,30.702,76.801,230,46,23,69,92,0.17
+HOSP-125,Apollo Clinic Sector 8 Chandigarh,30.738,76.795,60,12,6,18,24,0.1
+HOSP-126,Cloudnine Hospital Industrial Area,30.705,76.798,105,21,10,32,42,0.12
+HOSP-127,Livasa Hospital Mohali,30.714,76.711,185,37,18,56,74,0.15
+HOSP-128,Shalby Multispecialty Hospital Mohali,30.695,76.728,240,48,24,72,96,0.17
+HOSP-129,AMCARE Hospital Zirakpur,30.645,76.821,150,30,15,45,60,0.14
+HOSP-130,Trinity Hospital and Medical Research,30.648,76.828,135,27,13,41,54,0.14
+HOSP-131,JP Hospital Zirakpur,30.641,76.815,195,39,19,58,79,0.16
+HOSP-132,Mehar Hospital Zirakpur,30.649,76.832,115,23,11,35,46,0.13
+HOSP-133,Alchemist Eye Hospital Panchkula,30.673,76.846,75,15,7,23,30,0.1
+HOSP-134,Motherhood Hospital Sector 43,30.728,76.741,90,18,9,27,36,0.12
+HOSP-135,Dhanwantry Hospital Sector 46,30.705,76.762,130,26,13,39,52,0.14
+HOSP-136,Kare Partners Mother and Child Hospital,30.691,76.852,80,16,8,24,32,0.11
+HOSP-137,Wings Hospital Mohali,30.708,76.722,125,25,12,38,50,0.13
+HOSP-138,Sanjivini Hospital Sector 11 Panchkula,30.688,76.862,95,19,9,28,39,0.12
+HOSP-139,Shri Guru Harkrishan Sahib Charitable,30.679,76.725,260,52,26,78,104,0.18
+HOSP-140,Faith Hospital Sector 15 Panchkula,30.682,76.871,110,22,11,33,44,0.13
+HOSP-141,Wings Healthcare Kharar Road,30.748,76.685,140,28,14,42,56,0.14
+HOSP-142,Prime Hospital New Sunny Enclave,30.751,76.678,165,33,16,50,66,0.15
+HOSP-143,Civil Hospital Kharar,30.742,76.645,215,43,21,65,86,0.17
+HOSP-144,Cosmopolitan Hospital Kharar,30.753,76.652,130,26,13,39,52,0.14
+HOSP-145,Indus International Hospital Derabassi,30.589,76.845,280,56,28,84,112,0.19
+HOSP-146,Civil Hospital Derabassi,30.595,76.852,190,38,19,57,76,0.16
+HOSP-147,Civil Hospital Kalka,30.835,76.935,150,30,15,45,60,0.14
+HOSP-148,Lifeline Multi Speciality Hospital Pinjore,30.798,76.915,120,24,12,36,48,0.13
+HOSP-149,Civil Hospital Manimajra,30.722,76.839,180,36,18,54,72,0.15
+HOSP-150,Homi Bhabha Cancer Hospital New Chandigarh,30.798,76.732,320,64,32,96,128,0.2

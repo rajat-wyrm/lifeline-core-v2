@@ -1,0 +1,10 @@
+scenario,policy,bed_miss_rate_mean,bed_miss_rate_std,mean_time_to_treatment_min,mean_time_to_treatment_std,p95_time_to_treatment_min,redirects_mean,double_allocation_count
+normal_day,NEAREST_HOSPITAL,4.43,3.17,4.72,1.02,15.81,6.7,0
+normal_day,PORTAL_COUNT,0.33,0.54,3.39,0.29,8.04,0.5,0
+normal_day,LIFELINE_CORE,0.0,0.0,11.0,0.78,25.12,0.0,0
+contention_surge,NEAREST_HOSPITAL,4.43,3.17,4.72,1.02,15.81,6.7,0
+contention_surge,PORTAL_COUNT,0.33,0.54,3.39,0.29,8.04,0.5,0
+contention_surge,LIFELINE_CORE,0.0,0.0,11.0,0.78,25.12,0.0,0
+feed_outage_chaos,NEAREST_HOSPITAL,4.0,3.03,4.57,0.98,13.72,6.0,0
+feed_outage_chaos,PORTAL_COUNT,0.5,0.51,3.42,0.3,8.13,0.8,0
+feed_outage_chaos,LIFELINE_CORE,0.0,0.0,11.47,0.71,25.07,0.0,0

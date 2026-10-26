@@ -16,6 +16,9 @@ import {
   ShieldAlert, 
   FileText,
   AlertTriangle,
+  Search,
+  Settings,
+  UserCheck,
   Menu,
   X
 } from 'lucide-react';
@@ -44,11 +47,14 @@ export function Navbar() {
     { href: '/app/requests', label: 'Requests', icon: Clock },
     { href: '/app/reservations', label: 'Ledger Holds', icon: ShieldAlert },
     { href: '/app/triage', label: 'Triage Queue', icon: ListOrdered },
+    { href: '/app/alerts', label: 'Alerts', icon: AlertTriangle },
     { href: '/app/simulator', label: 'Simulator', icon: Cpu },
     { href: '/app/experiments', label: '3-Policy Eval', icon: FlaskConical },
     { href: '/app/benchmarks', label: 'Benchmarks', icon: BarChart3 },
     { href: '/app/algorithms', label: 'ADSA Algorithms', icon: Network },
     { href: '/app/observability', label: 'Observability', icon: FileText },
+    { href: '/app/search', label: 'Search', icon: Search },
+    { href: '/app/settings', label: 'Settings', icon: Settings },
   ];
 
   return (
@@ -108,6 +114,13 @@ export function Navbar() {
             >
               <AlertTriangle className="w-3 h-3" />
               Ethics
+            </Link>
+            <Link
+              href="/login"
+              className="text-xs text-sky-400 hover:text-sky-300 px-2 py-1 rounded flex items-center gap-1 transition font-medium"
+            >
+              <UserCheck className="w-3.5 h-3.5" />
+              Operator Login
             </Link>
 
             {/* C++ Engine Status Indicator */}

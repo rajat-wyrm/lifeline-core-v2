@@ -100,11 +100,33 @@ export default function HospitalDetailPage() {
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex flex-col sm:flex-row items-end sm:items-center gap-3">
             <span className={`px-2.5 py-1 rounded text-xs font-mono font-medium ${badge.color}`}>
               {badge.label} (Freshness: {(freshScore * 100).toFixed(0)}%)
             </span>
           </div>
+        </div>
+
+        {/* Sub-route tabs */}
+        <div className="flex items-center gap-1 bg-slate-900 border border-slate-800 p-1 rounded-lg text-xs overflow-x-auto">
+          <Link href={`/app/hospitals/${hospitalId}`} className="px-3 py-1.5 rounded bg-slate-800 text-white font-medium">
+            Overview
+          </Link>
+          <Link href={`/app/hospitals/${hospitalId}/resources`} className="px-3 py-1.5 rounded text-slate-400 hover:text-white transition">
+            Resources
+          </Link>
+          <Link href={`/app/hospitals/${hospitalId}/capabilities`} className="px-3 py-1.5 rounded text-slate-400 hover:text-white transition">
+            Capabilities
+          </Link>
+          <Link href={`/app/hospitals/${hospitalId}/feed-health`} className="px-3 py-1.5 rounded text-slate-400 hover:text-white transition">
+            Feed Health
+          </Link>
+          <Link href={`/app/hospitals/${hospitalId}/status-history`} className="px-3 py-1.5 rounded text-slate-400 hover:text-white transition">
+            History
+          </Link>
+          <Link href={`/app/hospitals/${hospitalId}/audit`} className="px-3 py-1.5 rounded text-slate-400 hover:text-white transition">
+            Audit
+          </Link>
         </div>
       </div>
 

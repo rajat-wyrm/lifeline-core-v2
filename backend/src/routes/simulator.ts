@@ -127,4 +127,36 @@ print(json.dumps(res))
       });
     }
   });
+
+  // List historical simulation runs
+  app.get('/api/v2/simulator/runs', async (request, reply) => {
+    const res = await query(`
+      SELECT id, scenario, policy, num_requests, seed,
+             bed_miss_rate_pct, mean_time_min, p95_time_min, p99_time_min,
+             redirect_count, double_allocation_count, executed_at
+      FROM simulation_runs
+      ORDER BY executed_at DESC
+      LIMIT 50
+    `);
+    return { count: res.rows.length, data: res.rows };
+  });
+
+  // Get single simulation run by ID
+  app.get('/api/v2/simulator/runs/:id', async (request, reply) => {
+    const { id } = request.params as { id: string };
+    const res = await query(`
+      SELECT id, scenario, policy, num_requests, seed,
+             bed_miss_rate_pct, mean_time_min, p95_time_min, p99_time_min,
+             redirect_count, double_allocation_count, executed_at
+      FROM simulation_runs
+      WHERE id = $1
+    `, [id]);
+
+    if (res.rows.length === 0) {
+      return reply.status(404).send({ error: 'NOT_FOUND', message: `Simulation run ${id} not found` });
+    }
+
+    return { data: res.rows[0] };
+  });
 };
+

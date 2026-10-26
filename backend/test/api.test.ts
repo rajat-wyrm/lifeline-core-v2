@@ -109,3 +109,92 @@ test('GET /api/v2/benchmarks returns crossover and lock metrics', async () => {
   assert.ok(body.concurrency_lock_scalability);
   assert.equal(body.segment_tree_crossover.data.length, 4);
 });
+
+test('POST /api/v2/auth/login allows demo role login and sets cookie', async () => {
+  const res = await app.inject({
+    method: 'POST',
+    url: '/api/v2/auth/login',
+    payload: {
+      email: 'dispatch@lifeline.local',
+      password: 'Lifeline@2026'
+    }
+  });
+  assert.equal(res.statusCode, 200);
+  const body = JSON.parse(res.payload);
+  assert.equal(body.user.role, 'DISPATCHER');
+  assert.ok(res.headers['set-cookie']);
+});
+
+test('GET /api/v2/alerts returns seeded or active alerts', async () => {
+  const res = await app.inject({
+    method: 'GET',
+    url: '/api/v2/alerts'
+  });
+  assert.equal(res.statusCode, 200);
+  const body = JSON.parse(res.payload);
+  assert.ok(Array.isArray(body.data));
+});
+
+test('GET /api/v2/search returns matched hospitals and playbooks', async () => {
+  const res = await app.inject({
+    method: 'GET',
+    url: '/api/v2/search?q=PGIMER'
+  });
+  assert.equal(res.statusCode, 200);
+  const body = JSON.parse(res.payload);
+  assert.ok(body.results.hospitals.length >= 1);
+  assert.equal(body.results.hospitals[0].id, 'HOSP-101');
+});
+
+test('GET /api/v2/playbooks returns emergency protocol playbooks', async () => {
+  const res = await app.inject({
+    method: 'GET',
+    url: '/api/v2/playbooks'
+  });
+  assert.equal(res.statusCode, 200);
+  const body = JSON.parse(res.payload);
+  assert.ok(body.count >= 3);
+  assert.equal(body.data[0].id, 'PBK-101');
+});
+
+test('GET /api/v2/zones returns Tricity emergency zones', async () => {
+  const res = await app.inject({
+    method: 'GET',
+    url: '/api/v2/zones'
+  });
+  assert.equal(res.statusCode, 200);
+  const body = JSON.parse(res.payload);
+  assert.equal(body.count, 6);
+  assert.equal(body.data[0].id, 'ZONE-CHD-NORTH');
+});
+
+test('POST /api/v2/routes/plan calculates A* route and metrics', async () => {
+  const res = await app.inject({
+    method: 'POST',
+    url: '/api/v2/routes/plan',
+    payload: {
+      origin_lat: 30.7333,
+      origin_lng: 76.7794,
+      hospital_id: 'HOSP-101',
+      algorithm: 'ASTAR'
+    }
+  });
+  assert.equal(res.statusCode, 200);
+  const body = JSON.parse(res.payload);
+  assert.equal(body.success, true);
+  assert.ok(body.metrics.route_distance_km > 0);
+  assert.ok(body.metrics.eta_minutes > 0);
+  assert.ok(body.waypoints.length >= 2);
+});
+
+test('GET /api/v2/observability/metrics returns latency and memory stats', async () => {
+  const res = await app.inject({
+    method: 'GET',
+    url: '/api/v2/observability/metrics'
+  });
+  assert.equal(res.statusCode, 200);
+  const body = JSON.parse(res.payload);
+  assert.ok(body.http_latencies);
+  assert.ok(body.memory.heap_used_mb > 0);
+});
+
